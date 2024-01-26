@@ -1,10 +1,5 @@
 public class Sudoku {
-    public static void main(String[] args) {
-        Sudoku sudoku = new Sudoku();
-        sudoku.afficher();
-        
-        
-    }
+   
     
     //Initialisation du tableau
     public int[][] tableau ={
