@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 public class Sudoku {
    
     
@@ -65,10 +67,12 @@ public class Sudoku {
 
 
     }
-
-    
-
-
-
+    private boolean Verif (int ligne, int colone,int valeurs, int tableau[][]){
+        //verif ligne, colone et box
+        if(VerifBox == true && verifCol == true && verifLigne == true){
+            return true;
+        }
+        return false;
+    }
 }
-
+    private 
