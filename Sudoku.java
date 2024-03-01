@@ -1,6 +1,9 @@
 import java.util.Vector;
 
+
 public class Sudoku {
+    
+    private int tailleGrille =9;
    
     
     //Initialisation du tableau
@@ -33,46 +36,68 @@ public class Sudoku {
     
     }
     private boolean verifLigne(int ligne, int valeurs, int tableau[][]){
-        //Verification de la ligne
-        for (int i = 0; i < 9; i++){
+        //Verification si le nombre existe dans la ligne
+        for (int i = 0; i < tailleGrille; i++){
             if (tableau[ligne][i] == valeurs){
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
     private boolean verifCol(int colone, int valeurs, int tableau[][]){
-        //verif colone 
-        for(int k = 0; k<9; k++){
+        //verifie si le nombre existe dans la colone 
+        for(int k = 0; k<tailleGrille; k++){
             if(tableau[k][colone] == valeurs){
-                return false;
+                return true;
             }
 
         }
-        return true;
+        return false;
     }
     private boolean verifBox(int colone, int valeurs, int tableau[][]){
-        //verif box 3x3
+        //verifie si le nombre existe dans les bpx 3x3
         int boxCol = colone % 3;
         int boxLigne = colone % 3;
         for(int i = boxLigne * 3; i < boxLigne * 3 + 3; i++){
             for(int k = boxCol * 3; k < boxCol * 3 + 3; k++){
                 if(tableau[i][k] == valeurs){
+                    return true;
+                }
+            }
+        }
+        return false;
+
+    }
+   
+
+    public boolean isValid(int tableau [][], int col, int num, int row){
+        for(int i =0; i<tailleGrille; i++){
+            if (tableau[row][i]== num || tableau[i][col]== num) {
+                return false;
+            }
+        }
+        int boxRow = (row/3)*3;
+        int boxCol = (col/3)*3;
+        for(int i =0; i < 3 ; i++){
+            for(int j =0; j<3; j++){
+                if (tableau[boxRow+i][boxCol+j]== num){
                     return false;
                 }
             }
         }
-        return true;
-        
-
+     return true; 
 
     }
-    private boolean Verif (int ligne, int colone,int valeurs, int tableau[][]){
-        //verif ligne, colone et box
-        if(VerifBox == true && verifCol == true && verifLigne == true){
-            return true;
-        }
-        return false;
+    public boolean solveSudoku(int tableau[][]){
+        for(int rows = 0; rows<tailleGrille;rows++){
+            for(int cols =0; cols<tailleGrille;col++){
+                if board
+            }
+
+        }    
     }
 }
-    private 
+
+
+
+    
