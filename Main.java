@@ -4,6 +4,7 @@ public class Main {
  public static void main(String[] args) {
     //variables et Object
         Sudoku sudoku = new Sudoku();
+<<<<<<< HEAD
         Scanner scanner = new Scanner(System.in);
        
         String menue = "";
@@ -25,6 +26,12 @@ public class Main {
         
 
 
+=======
+        System.out.println("Voici le sudoku à résoudre :");
+        sudoku.afficher();
+        System.out.println("Veuillez attendre 3 secondes.  Le sudoku est en cours de résolution...");
+       
+>>>>>>> 1c2de3222a4bcf5fda62ace1d3f07cf047f41a88
         
         
         

@@ -20,18 +20,17 @@ public class Sudoku {
     };
     public void afficher(){
         //Affichage du tableau
-      for(int i = 0; i < 9; i++){
-        for (int k = 0; k < 9; k++){
-            if (k % 3 == 0 && k != 0) {
-                System.out.print("| "); 
+        for(int i = 0; i < 9; i++){
+            for (int k = 0; k < 9; k++){
+                if (k % 3 == 0 && k != 0 ) {
+                    System.out.print("| "); 
+                }
+                System.out.print(tableau[i][k]+" ");
             }
-            System.out.print(tableau[i][k]+" ");
-            if (i % 3 == 2 && i != 0 && k == 8) {
-                System.out.println();
+            System.out.println();
+            if (i % 3 == 2) {
                 System.out.println("---------------------");  
             }
-        }
-        System.out.println();
         }
     
     }
@@ -88,6 +87,7 @@ public class Sudoku {
      return true; 
 
     }
+<<<<<<< HEAD
     public boolean solveSudoku(int tableau[][]){
         for(int rows = 0; rows<tailleGrille;rows++){
             for(int cols =0; cols<tailleGrille;col++){
@@ -101,3 +101,19 @@ public class Sudoku {
 
 
     
+=======
+    private boolean verif(int ligne, int colone, int valeurs, int tableau[][]){
+        //verif si la valeur est possible
+        if (condition(ligne, colone, valeurs, tableau)){
+            return true;{
+        
+        }
+        else{
+            return false;
+            
+        }
+    }
+    
+
+ 
+>>>>>>> 1c2de3222a4bcf5fda62ace1d3f07cf047f41a88
