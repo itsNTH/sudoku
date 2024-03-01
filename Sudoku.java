@@ -87,7 +87,6 @@ public class Sudoku {
      return true; 
 
     }
-<<<<<<< HEAD
     public boolean solveSudoku(int tableau[][]){
         for(int rows = 0; rows<tailleGrille;rows++){
             for(int cols =0; cols<tailleGrille;col++){
@@ -101,19 +100,3 @@ public class Sudoku {
 
 
     
-=======
-    private boolean verif(int ligne, int colone, int valeurs, int tableau[][]){
-        //verif si la valeur est possible
-        if (condition(ligne, colone, valeurs, tableau)){
-            return true;{
-        
-        }
-        else{
-            return false;
-            
-        }
-    }
-    
-
- 
->>>>>>> 1c2de3222a4bcf5fda62ace1d3f07cf047f41a88
