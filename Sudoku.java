@@ -89,11 +89,24 @@ public class Sudoku {
     }
     public boolean solveSudoku(int tableau[][]){
         for(int rows = 0; rows<tailleGrille;rows++){
-            for(int cols =0; cols<tailleGrille;col++){
-                if board
-            }
+            for(int cols =0; cols<tailleGrille;cols++){
+                if(tableau[rows][cols]== 0){
+                    for(int num =1; num <= tailleGrille; num++){
+                        if (isValid(tableau, cols, num, rows)) {
+                            tableau[rows][cols]= num;
+                            if (solveSudoku(tableau)) {
+                                return true;
+                                
+                            }
+                            tableau[cols][rows]= 0;
+                        }
+                    }
+                }
+                return false;
+            }   
 
-        }    
+        } 
+        return true;
     }
 }
 
